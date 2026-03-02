@@ -1,0 +1,24 @@
+/* src/style.css */
+
+/* 1. External URLs first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap');
+
+/* 2. Then Tailwind */
+@import "tailwindcss";
+
+/* 3. Then Custom Variants */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 4. Then everything else */
+:root {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-arabic {
+  font-family: 'Scheherazade New', serif;
+}
+
+body {
+  background-color: #f1f5f9; 
+  color: #1e293b;
+}
