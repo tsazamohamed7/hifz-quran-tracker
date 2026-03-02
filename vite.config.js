@@ -24,12 +24,12 @@ export default defineConfig({
 
         icons: [
           {
-            src: '/icons/pwa-192.png',
+            src: '/hifz-quran-tracker/icons/pwa-192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: '/icons/pwa-512.png',
+            src: '/hifz-quran-tracker/icons/pwa-512.png',
             sizes: '512x512',
             type: 'image/png'
           }
