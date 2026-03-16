@@ -40,9 +40,15 @@ export async function apiPost({ action, body } = {}) {
 
   const formData = new URLSearchParams();
 
-  Object.keys(body || {}).forEach(key => {
-    formData.append(key, body[key]);
-  });
+Object.keys(body || {}).forEach(key => {
+  const value = body[key];
+
+  if (Array.isArray(value) || typeof value === "object") {
+    formData.append(key, JSON.stringify(value));
+  } else {
+    formData.append(key, value);
+  }
+});
 
   const res = await fetch(url.toString(), {
     method: "POST",
